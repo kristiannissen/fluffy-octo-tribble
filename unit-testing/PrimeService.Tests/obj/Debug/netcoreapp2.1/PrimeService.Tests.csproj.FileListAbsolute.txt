@@ -1,0 +1,17 @@
+/home/unit-testing/PrimeService.Tests/obj/Debug/netcoreapp2.1/PrimeService.Tests.csprojAssemblyReference.cache
+/home/unit-testing/PrimeService.Tests/obj/Debug/netcoreapp2.1/PrimeService.Tests.csproj.CoreCompileInputs.cache
+/home/unit-testing/PrimeService.Tests/obj/Debug/netcoreapp2.1/PrimeService.Tests.AssemblyInfoInputs.cache
+/home/unit-testing/PrimeService.Tests/obj/Debug/netcoreapp2.1/PrimeService.Tests.AssemblyInfo.cs
+/home/unit-testing/PrimeService.Tests/bin/Debug/netcoreapp2.1/xunit.runner.visualstudio.dotnetcore.testadapter.dll
+/home/unit-testing/PrimeService.Tests/bin/Debug/netcoreapp2.1/xunit.runner.reporters.netcoreapp10.dll
+/home/unit-testing/PrimeService.Tests/bin/Debug/netcoreapp2.1/xunit.runner.utility.netcoreapp10.dll
+/home/unit-testing/PrimeService.Tests/bin/Debug/netcoreapp2.1/PrimeService.Tests.deps.json
+/home/unit-testing/PrimeService.Tests/bin/Debug/netcoreapp2.1/PrimeService.Tests.runtimeconfig.json
+/home/unit-testing/PrimeService.Tests/bin/Debug/netcoreapp2.1/PrimeService.Tests.runtimeconfig.dev.json
+/home/unit-testing/PrimeService.Tests/bin/Debug/netcoreapp2.1/PrimeService.Tests.dll
+/home/unit-testing/PrimeService.Tests/bin/Debug/netcoreapp2.1/PrimeService.Tests.pdb
+/home/unit-testing/PrimeService.Tests/bin/Debug/netcoreapp2.1/PrimeService.dll
+/home/unit-testing/PrimeService.Tests/bin/Debug/netcoreapp2.1/PrimeService.pdb
+/home/unit-testing/PrimeService.Tests/obj/Debug/netcoreapp2.1/PrimeService.Tests.csproj.CopyComplete
+/home/unit-testing/PrimeService.Tests/obj/Debug/netcoreapp2.1/PrimeService.Tests.dll
+/home/unit-testing/PrimeService.Tests/obj/Debug/netcoreapp2.1/PrimeService.Tests.pdb
