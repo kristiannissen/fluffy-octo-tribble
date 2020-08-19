@@ -1,0 +1,9 @@
+/home/subscriptionservice/PingService/bin/Debug/netstandard2.0/PingService.deps.json
+/home/subscriptionservice/PingService/bin/Debug/netstandard2.0/PingService.dll
+/home/subscriptionservice/PingService/bin/Debug/netstandard2.0/PingService.pdb
+/home/subscriptionservice/PingService/obj/Debug/netstandard2.0/PingService.csprojAssemblyReference.cache
+/home/subscriptionservice/PingService/obj/Debug/netstandard2.0/PingService.csproj.CoreCompileInputs.cache
+/home/subscriptionservice/PingService/obj/Debug/netstandard2.0/PingService.AssemblyInfoInputs.cache
+/home/subscriptionservice/PingService/obj/Debug/netstandard2.0/PingService.AssemblyInfo.cs
+/home/subscriptionservice/PingService/obj/Debug/netstandard2.0/PingService.dll
+/home/subscriptionservice/PingService/obj/Debug/netstandard2.0/PingService.pdb

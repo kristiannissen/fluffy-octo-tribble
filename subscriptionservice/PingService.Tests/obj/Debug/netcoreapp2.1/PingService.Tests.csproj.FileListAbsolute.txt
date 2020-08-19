@@ -1,0 +1,17 @@
+/home/subscriptionservice/PingService.Tests/bin/Debug/netcoreapp2.1/xunit.runner.visualstudio.dotnetcore.testadapter.dll
+/home/subscriptionservice/PingService.Tests/bin/Debug/netcoreapp2.1/xunit.runner.reporters.netcoreapp10.dll
+/home/subscriptionservice/PingService.Tests/bin/Debug/netcoreapp2.1/xunit.runner.utility.netcoreapp10.dll
+/home/subscriptionservice/PingService.Tests/bin/Debug/netcoreapp2.1/PingService.Tests.deps.json
+/home/subscriptionservice/PingService.Tests/bin/Debug/netcoreapp2.1/PingService.Tests.runtimeconfig.json
+/home/subscriptionservice/PingService.Tests/bin/Debug/netcoreapp2.1/PingService.Tests.runtimeconfig.dev.json
+/home/subscriptionservice/PingService.Tests/bin/Debug/netcoreapp2.1/PingService.Tests.dll
+/home/subscriptionservice/PingService.Tests/bin/Debug/netcoreapp2.1/PingService.Tests.pdb
+/home/subscriptionservice/PingService.Tests/obj/Debug/netcoreapp2.1/PingService.Tests.csprojAssemblyReference.cache
+/home/subscriptionservice/PingService.Tests/obj/Debug/netcoreapp2.1/PingService.Tests.csproj.CoreCompileInputs.cache
+/home/subscriptionservice/PingService.Tests/obj/Debug/netcoreapp2.1/PingService.Tests.AssemblyInfoInputs.cache
+/home/subscriptionservice/PingService.Tests/obj/Debug/netcoreapp2.1/PingService.Tests.AssemblyInfo.cs
+/home/subscriptionservice/PingService.Tests/obj/Debug/netcoreapp2.1/PingService.Tests.dll
+/home/subscriptionservice/PingService.Tests/obj/Debug/netcoreapp2.1/PingService.Tests.pdb
+/home/subscriptionservice/PingService.Tests/bin/Debug/netcoreapp2.1/PingService.dll
+/home/subscriptionservice/PingService.Tests/bin/Debug/netcoreapp2.1/PingService.pdb
+/home/subscriptionservice/PingService.Tests/obj/Debug/netcoreapp2.1/PingService.Tests.csproj.CopyComplete

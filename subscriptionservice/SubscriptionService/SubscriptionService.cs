@@ -18,7 +18,7 @@ namespace Subscription.Services
       {
         try {
           string response = await client.GetStringAsync("https://api.quickpay.net/ping");
-          Console.WriteLine(response);
+
         } catch(HttpRequestException e) {
           throw new Exception("Shit happens");
         }
