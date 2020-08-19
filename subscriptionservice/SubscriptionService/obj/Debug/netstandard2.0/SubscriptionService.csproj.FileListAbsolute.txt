@@ -1,0 +1,9 @@
+/home/subscriptionservice/SubscriptionService/bin/Debug/netstandard2.0/SubscriptionService.deps.json
+/home/subscriptionservice/SubscriptionService/bin/Debug/netstandard2.0/SubscriptionService.dll
+/home/subscriptionservice/SubscriptionService/bin/Debug/netstandard2.0/SubscriptionService.pdb
+/home/subscriptionservice/SubscriptionService/obj/Debug/netstandard2.0/SubscriptionService.csprojAssemblyReference.cache
+/home/subscriptionservice/SubscriptionService/obj/Debug/netstandard2.0/SubscriptionService.csproj.CoreCompileInputs.cache
+/home/subscriptionservice/SubscriptionService/obj/Debug/netstandard2.0/SubscriptionService.AssemblyInfoInputs.cache
+/home/subscriptionservice/SubscriptionService/obj/Debug/netstandard2.0/SubscriptionService.AssemblyInfo.cs
+/home/subscriptionservice/SubscriptionService/obj/Debug/netstandard2.0/SubscriptionService.dll
+/home/subscriptionservice/SubscriptionService/obj/Debug/netstandard2.0/SubscriptionService.pdb

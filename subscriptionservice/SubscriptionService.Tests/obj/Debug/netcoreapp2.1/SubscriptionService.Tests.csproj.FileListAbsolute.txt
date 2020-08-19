@@ -1,0 +1,17 @@
+/home/subscriptionservice/SubscriptionService.Tests/bin/Debug/netcoreapp2.1/xunit.runner.visualstudio.dotnetcore.testadapter.dll
+/home/subscriptionservice/SubscriptionService.Tests/bin/Debug/netcoreapp2.1/xunit.runner.reporters.netcoreapp10.dll
+/home/subscriptionservice/SubscriptionService.Tests/bin/Debug/netcoreapp2.1/xunit.runner.utility.netcoreapp10.dll
+/home/subscriptionservice/SubscriptionService.Tests/bin/Debug/netcoreapp2.1/SubscriptionService.Tests.deps.json
+/home/subscriptionservice/SubscriptionService.Tests/bin/Debug/netcoreapp2.1/SubscriptionService.Tests.runtimeconfig.json
+/home/subscriptionservice/SubscriptionService.Tests/bin/Debug/netcoreapp2.1/SubscriptionService.Tests.runtimeconfig.dev.json
+/home/subscriptionservice/SubscriptionService.Tests/bin/Debug/netcoreapp2.1/SubscriptionService.Tests.dll
+/home/subscriptionservice/SubscriptionService.Tests/bin/Debug/netcoreapp2.1/SubscriptionService.Tests.pdb
+/home/subscriptionservice/SubscriptionService.Tests/bin/Debug/netcoreapp2.1/SubscriptionService.dll
+/home/subscriptionservice/SubscriptionService.Tests/bin/Debug/netcoreapp2.1/SubscriptionService.pdb
+/home/subscriptionservice/SubscriptionService.Tests/obj/Debug/netcoreapp2.1/SubscriptionService.Tests.csprojAssemblyReference.cache
+/home/subscriptionservice/SubscriptionService.Tests/obj/Debug/netcoreapp2.1/SubscriptionService.Tests.csproj.CoreCompileInputs.cache
+/home/subscriptionservice/SubscriptionService.Tests/obj/Debug/netcoreapp2.1/SubscriptionService.Tests.AssemblyInfoInputs.cache
+/home/subscriptionservice/SubscriptionService.Tests/obj/Debug/netcoreapp2.1/SubscriptionService.Tests.AssemblyInfo.cs
+/home/subscriptionservice/SubscriptionService.Tests/obj/Debug/netcoreapp2.1/SubscriptionService.Tests.csproj.CopyComplete
+/home/subscriptionservice/SubscriptionService.Tests/obj/Debug/netcoreapp2.1/SubscriptionService.Tests.dll
+/home/subscriptionservice/SubscriptionService.Tests/obj/Debug/netcoreapp2.1/SubscriptionService.Tests.pdb
