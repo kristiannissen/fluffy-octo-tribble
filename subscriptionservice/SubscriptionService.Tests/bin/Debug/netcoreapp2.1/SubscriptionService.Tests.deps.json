@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": "93b5d6fa096726aa90619b72e309439934091475"
+    "signature": "caa30060816eab346d89d51f75c7492fb1ce4b90"
   },
   "compilationOptions": {},
   "targets": {
@@ -15,6 +15,14 @@
         },
         "runtime": {
           "SubscriptionService.Tests.dll": {}
+        }
+      },
+      "Microsoft.Bcl.AsyncInterfaces/1.1.0": {
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Bcl.AsyncInterfaces.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "4.700.19.56404"
+          }
         }
       },
       "Microsoft.CodeCoverage/15.9.0": {
@@ -786,6 +794,14 @@
         }
       },
       "System.Runtime/4.1.0": {},
+      "System.Runtime.CompilerServices.Unsafe/4.7.1": {
+        "runtime": {
+          "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.dll": {
+            "assemblyVersion": "4.0.6.0",
+            "fileVersion": "4.0.0.0"
+          }
+        }
+      },
       "System.Runtime.Extensions/4.1.0": {
         "dependencies": {
           "System.Runtime": "4.1.0"
@@ -853,6 +869,27 @@
         "dependencies": {
           "System.Runtime": "4.1.0",
           "System.Text.Encoding": "4.0.11"
+        }
+      },
+      "System.Text.Encodings.Web/4.7.1": {
+        "runtime": {
+          "lib/netstandard2.0/System.Text.Encodings.Web.dll": {
+            "assemblyVersion": "4.0.5.0",
+            "fileVersion": "4.700.20.21406"
+          }
+        }
+      },
+      "System.Text.Json/4.7.2": {
+        "dependencies": {
+          "Microsoft.Bcl.AsyncInterfaces": "1.1.0",
+          "System.Runtime.CompilerServices.Unsafe": "4.7.1",
+          "System.Text.Encodings.Web": "4.7.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Text.Json.dll": {
+            "assemblyVersion": "4.0.1.2",
+            "fileVersion": "4.700.20.21406"
+          }
         }
       },
       "System.Text.RegularExpressions/4.1.0": {
@@ -1055,6 +1092,9 @@
         }
       },
       "SubscriptionService/1.0.0": {
+        "dependencies": {
+          "System.Text.Json": "4.7.2"
+        },
         "runtime": {
           "SubscriptionService.dll": {}
         }
@@ -1066,6 +1106,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Microsoft.Bcl.AsyncInterfaces/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-1Am6l4Vpn3/K32daEqZI+FFr96OlZkgwK2LcT3pZ2zWubR5zTPW3/FkO1Rat9kb7oQOa4rxgl9LJHc5tspCWfg==",
+      "path": "microsoft.bcl.asyncinterfaces/1.1.0",
+      "hashPath": "microsoft.bcl.asyncinterfaces.1.1.0.nupkg.sha512"
     },
     "Microsoft.CodeCoverage/15.9.0": {
       "type": "package",
@@ -1396,6 +1443,13 @@
       "path": "system.runtime/4.1.0",
       "hashPath": "system.runtime.4.1.0.nupkg.sha512"
     },
+    "System.Runtime.CompilerServices.Unsafe/4.7.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-zOHkQmzPCn5zm/BH+cxC1XbUS3P4Yoi3xzW7eRgVpDR2tPGSzyMZ17Ig1iRkfJuY0nhxkQQde8pgePNiA7z7TQ==",
+      "path": "system.runtime.compilerservices.unsafe/4.7.1",
+      "hashPath": "system.runtime.compilerservices.unsafe.4.7.1.nupkg.sha512"
+    },
     "System.Runtime.Extensions/4.1.0": {
       "type": "package",
       "serviceable": true,
@@ -1458,6 +1512,20 @@
       "sha512": "sha512-jtbiTDtvfLYgXn8PTfWI+SiBs51rrmO4AAckx4KR6vFK9Wzf6tI8kcRdsYQNwriUeQ1+CtQbM1W4cMbLXnj/OQ==",
       "path": "system.text.encoding.extensions/4.0.11",
       "hashPath": "system.text.encoding.extensions.4.0.11.nupkg.sha512"
+    },
+    "System.Text.Encodings.Web/4.7.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3qreYFQcLnyFk1LuaNWyyWE+sfkfe5eSTaIIssYrLNUIDbgyZNQBYQSzSDo4AprpjVeVX2T4KHKii9fiSZVUow==",
+      "path": "system.text.encodings.web/4.7.1",
+      "hashPath": "system.text.encodings.web.4.7.1.nupkg.sha512"
+    },
+    "System.Text.Json/4.7.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-TcMd95wcrubm9nHvJEQs70rC0H/8omiSGGpU4FQ/ZA1URIqD4pjmFJh2Mfv1yH1eHgJDWTi2hMDXwTET+zOOyg==",
+      "path": "system.text.json/4.7.2",
+      "hashPath": "system.text.json.4.7.2.nupkg.sha512"
     },
     "System.Text.RegularExpressions/4.1.0": {
       "type": "package",
