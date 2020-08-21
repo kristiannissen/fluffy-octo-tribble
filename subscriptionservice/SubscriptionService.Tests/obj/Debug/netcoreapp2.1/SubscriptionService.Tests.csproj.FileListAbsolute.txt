@@ -15,3 +15,4 @@
 /home/subscriptionservice/SubscriptionService.Tests/obj/Debug/netcoreapp2.1/SubscriptionService.Tests.csproj.CopyComplete
 /home/subscriptionservice/SubscriptionService.Tests/obj/Debug/netcoreapp2.1/SubscriptionService.Tests.dll
 /home/subscriptionservice/SubscriptionService.Tests/obj/Debug/netcoreapp2.1/SubscriptionService.Tests.pdb
+/home/subscriptionservice/SubscriptionService.Tests/bin/Debug/netcoreapp2.1/xunit.runner.json

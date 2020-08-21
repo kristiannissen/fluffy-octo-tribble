@@ -10,7 +10,8 @@ namespace SubscriptionServiceTests
 
             public SubscriptionServiceTests()
             {
-                    _subSer = new SubscriptionService();
+              string API_KEY = Environment.GetEnvironmentVariable("API_KEY");
+                    _subSer = new SubscriptionService(API_KEY);
             }
 
         [Fact]
@@ -22,7 +23,7 @@ namespace SubscriptionServiceTests
         [Fact]
         public void CreateNewSubscriptionTest()
         {
-          _subSer.create("lala", "DKK", "Hello Kitty Subscription");
+          _subSer.Create("lala", "DKK", "Hello Kitty Subscription");
         }
     }
 }

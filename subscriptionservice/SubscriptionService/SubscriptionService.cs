@@ -9,12 +9,15 @@ namespace Subscription.Services
     {
       private static readonly HttpClient client = new HttpClient();
 
-      public SubscriptionService()
+      public SubscriptionService(string API_KEY)
       {
         client.DefaultRequestHeaders.Add("Accept-Version", "v10");
+        client.DefaultRequestHeaders.Add("Accept", "application/json");
+        // client.DefaultRequestHeaders.Add("Authorization", API_KEY);
+        Console.WriteLine($"Shit Mulla, {API_KEY}");
       }
 
-      public async void create(string orderId, string currency, string description)
+      public async void Create(string orderId, string currency, string description)
       {
         try {
           string response = await client.GetStringAsync("https://api.quickpay.net/ping");
