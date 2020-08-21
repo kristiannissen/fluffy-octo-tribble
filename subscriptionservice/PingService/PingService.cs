@@ -7,21 +7,21 @@ namespace PingService
 {
     public class Ping
     {
-      private static readonly HttpClient _client = new HttpClient();
+        private static readonly HttpClient _client = new HttpClient();
 
-      public static async Task<string> ShowPongMsg()
-      {
-        _client.DefaultRequestHeaders.Add("Accept-Version", "v10");
-        string response = await _client.GetStringAsync("https://api.quickpay.net/ping");
+        public static async Task<string> ShowPongMsg()
+        {
+            _client.DefaultRequestHeaders.Add("Accept-Version", "v10");
+            string response = await _client.GetStringAsync("https://api.quickpay.net/ping");
 
-        Pong pong = JsonSerializer.Deserialize<Pong>(response);
+            Pong pong = JsonSerializer.Deserialize<Pong>(response);
 
-        return pong.msg;
-      }
+            return pong.msg;
+        }
 
-      private class Pong
-      {
-        public string msg { get; set; }
-      }
+        private class Pong
+        {
+            public string msg { get; set; }
+        }
     }
 }

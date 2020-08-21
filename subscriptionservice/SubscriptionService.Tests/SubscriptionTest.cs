@@ -1,29 +1,32 @@
 using System;
 using Xunit;
 using Subscription.Services;
+using System.Threading.Tasks;
+using System.Net.Http;
 
 namespace SubscriptionServiceTests
 {
     public class SubscriptionServiceTests
     {
-            private readonly SubscriptionService _subSer;
+      private SubscriptionService sut;
 
-            public SubscriptionServiceTests()
-            {
-              string API_KEY = Environment.GetEnvironmentVariable("API_KEY");
-                    _subSer = new SubscriptionService(API_KEY);
-            }
+        public SubscriptionServiceTests()
+        {
+          string API_KEY = Environment.GetEnvironmentVariable("API_KEY");
+          sut = new SubscriptionService(API_KEY);
+        }
 
         [Fact]
         public void FirstTest()
         {
-          Assert.False(false, "Hey Kitty");
+            Assert.False(false, "Hey Kitty");
         }
 
         [Fact]
-        public void CreateNewSubscriptionTest()
+        public async Task CreateNewSubscriptionTest()
         {
-          _subSer.Create("lala", "DKK", "Hello Kitty Subscription");
+          int subscriptionId = sut.Create("ladida", "DKK", "Kitty porn subscription");
+          Assert.True(subscriptionId > 0);
         }
     }
 }
