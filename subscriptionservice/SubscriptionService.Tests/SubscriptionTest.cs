@@ -26,14 +26,14 @@ namespace SubscriptionServiceTests
         [Fact]
         public async Task CreateNewSubscriptionTest()
         {
-            int subscriptionId = await sut.Create(RandomString(10), "DKK", "Kitty porn subscription");
+            int subscriptionId = await sut.Create(RandomString(10), "DKK", "Hello Kitty Magazine Subscription");
             Assert.True(subscriptionId > 0);
         }
 
         [Fact]
         public async Task CreateSubscriptionURLTest()
         {
-          string paymentwindowurl = await sut.GetPaymentLinkUrl(RandomString(10), "DKK", "Kitty porn subscription", 666);
+          string paymentwindowurl = await sut.GetPaymentLinkUrl(RandomString(10), "DKK", "Hello Kitty Magazine Subscription", 666);
           Assert.True(paymentwindowurl.GetType() == typeof(string));
         }
 
