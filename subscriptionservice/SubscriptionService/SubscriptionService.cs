@@ -16,19 +16,19 @@ namespace Subscription.Services
         {
             client.DefaultRequestHeaders.Add("Accept-Version", "v10");
             client.DefaultRequestHeaders.Add("Accept", "application/json");
-            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("basic", $":{API_KEY}");
-            // Console.WriteLine($"Shit Mulla, {API_KEY}");
+            string encoded = Base64Encode($":{API_KEY}");
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic", encoded);
         }
 
         public async Task<int> Create(string orderId, string currency, string description)
         {
-          Subscription sub = new Subscription();
-          sub.order_id = orderId;
-          sub.currency = currency;
-          sub.description = description;
+            Subscription sub = new Subscription();
+            sub.order_id = orderId;
+            sub.currency = currency;
+            sub.description = description;
 
-          string json = JsonSerializer.Serialize(sub);
-          StringContent sC = new StringContent(json, Encoding.UTF8, "application/json");
+            string json = JsonSerializer.Serialize(sub);
+            StringContent sC = new StringContent(json, Encoding.UTF8, "application/json");
 
             try
             {
@@ -36,8 +36,9 @@ namespace Subscription.Services
                 string responseBody = await response.Content.ReadAsStringAsync();
                 response.EnsureSuccessStatusCode();
 
-                // Subscription subscription = JsonSerializer.Deserialize<Subscription>(responseBody);
-                return 1;
+                Subscription subscription = JsonSerializer.Deserialize<Subscription>(responseBody);
+
+                return subscription.id;
             }
             catch (HttpRequestException e)
             {
@@ -45,6 +46,12 @@ namespace Subscription.Services
             }
 
             return 0;
+        }
+
+        private static string Base64Encode(string text)
+        {
+          byte[] bytes = Encoding.UTF8.GetBytes(text);
+          return Convert.ToBase64String(bytes);
         }
 
         private class Subscription

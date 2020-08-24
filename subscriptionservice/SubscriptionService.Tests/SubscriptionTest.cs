@@ -8,12 +8,12 @@ namespace SubscriptionServiceTests
 {
     public class SubscriptionServiceTests
     {
-      private SubscriptionService sut;
+        private SubscriptionService sut;
 
         public SubscriptionServiceTests()
         {
-          string API_KEY = Environment.GetEnvironmentVariable("API_KEY");
-          sut = new SubscriptionService(API_KEY);
+            string API_KEY = Environment.GetEnvironmentVariable("API_KEY");
+            sut = new SubscriptionService(API_KEY);
         }
 
         [Fact]
@@ -25,8 +25,8 @@ namespace SubscriptionServiceTests
         [Fact]
         public async Task CreateNewSubscriptionTest()
         {
-          int subscriptionId = sut.Create("ladida", "DKK", "Kitty porn subscription");
-          Assert.True(subscriptionId > 0);
+            int subscriptionId = await sut.Create("ladida5", "DKK", "Kitty porn subscription");
+            Assert.True(subscriptionId > 0);
         }
     }
 }
