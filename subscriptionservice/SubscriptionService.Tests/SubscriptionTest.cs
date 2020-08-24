@@ -30,6 +30,13 @@ namespace SubscriptionServiceTests
             Assert.True(subscriptionId > 0);
         }
 
+        [Fact]
+        public async Task CreateSubscriptionURLTest()
+        {
+          string paymentwindowurl = await sut.GetPaymentLinkUrl(RandomString(10), "DKK", "Kitty porn subscription", 666);
+          Assert.True(paymentwindowurl.GetType() == typeof(string));
+        }
+
         private static string RandomString(int length)
         {
           const string pool = "abcdefghijklmnopqrstuvwxyz0123456789";
