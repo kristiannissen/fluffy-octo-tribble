@@ -33,36 +33,37 @@ namespace SubscriptionServiceTests
         [Fact]
         public async Task CreateSubscriptionURLTest()
         {
-          string paymentwindowurl = await sut.GetPaymentLinkUrl(RandomString(10), "DKK", "Hello Kitty Magazine Subscription", 666);
-          Assert.True(paymentwindowurl.GetType() == typeof(string));
+            string paymentwindowurl = await sut.GetPaymentLinkUrl(RandomString(10), "DKK", "Hello Kitty Magazine Subscription", 666);
+            Assert.True(paymentwindowurl.GetType() == typeof(string));
         }
 
         [Fact]
         public async Task CreateRecurringTest()
         {
-          //int id = await sut.Create(RandomString(10), "DKK", "Hello Kitty Magazine Subscription");
-          // string state = await sub.CreateRecurring(id, 666, RandomString(10));
-          // Assert.True(state == "pending");
+            int id = await sut.Create(RandomString(10), "DKK", "Hello Kitty Magazine Subscription");
+            string state = await sut.CreateRecurring(id, 666, RandomString(10), true);
+            Assert.True(state == "initial");
         }
 
         [Fact]
         public async Task CheckStateTest()
         {
-          int id = await sut.Create(RandomString(10), "DKK", "Hello Kitty Magazine Subscription");
-          string state = await sut.CheckState(id);
-          Assert.True(state == "initial");
+            int id = await sut.Create(RandomString(10), "DKK", "Hello Kitty Magazine Subscription");
+            string state = await sut.CheckState(id);
+            Assert.True(state == "initial");
         }
 
         private static string RandomString(int length)
         {
-          const string pool = "abcdefghijklmnopqrstuvwxyz0123456789";
-          Random random = new Random();
-          StringBuilder builder = new StringBuilder();
-          for (int i = 0; i < length; i++) {
-            var c = pool[random.Next(0, pool.Length)];
-            builder.Append(c);
-          }
-          return builder.ToString();
+            const string pool = "abcdefghijklmnopqrstuvwxyz0123456789";
+            Random random = new Random();
+            StringBuilder builder = new StringBuilder();
+            for (int i = 0; i < length; i++)
+            {
+                var c = pool[random.Next(0, pool.Length)];
+                builder.Append(c);
+            }
+            return builder.ToString();
         }
     }
 }
