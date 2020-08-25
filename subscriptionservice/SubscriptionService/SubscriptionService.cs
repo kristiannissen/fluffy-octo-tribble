@@ -54,7 +54,6 @@ namespace Subscription.Services
         public async Task<string> GetPaymentLinkUrl(string orderId, string currency, string description, int amount)
         {
           int subscriptionid = await Create(orderId, currency, description);
-          // Console.WriteLine(subscriptionid);
 
           Subscription sub = new Subscription();
           sub.amount = amount;
@@ -62,22 +61,22 @@ namespace Subscription.Services
           string json = JsonSerializer.Serialize(sub);
           StringContent sC = new StringContent(json, Encoding.UTF8, "application/json");
 
+          HttpResponseMessage response = await client.PutAsync($"https://api.quickpay.net/subscriptions/{subscriptionid}/link", sC);
+
           try
-          {
-            HttpResponseMessage response = await client.PutAsync($"https://api.quickpay.net/subscriptions/{subscriptionid}/link", sC);
-            string responseBody = await response.Content.ReadAsStringAsync();
+          {                        
             response.EnsureSuccessStatusCode();
-            // Console.WriteLine(responseBody);
-
-            Subscription subscription = JsonSerializer.Deserialize<Subscription>(responseBody);
-
-            return subscription.url;
+            if (response.Content is Object)
+            {
+              string responseBody = await response.Content.ReadAsStringAsync();
+              sub = JsonSerializer.Deserialize<Subscription>(responseBody);
+            }
           }
-          catch(HttpRequestException e)
+          finally
           {
-            Console.WriteLine(e);
+            response.Dispose();
           }
-          return "hello pussy";
+          return sub.url;
         }
 
         private static string Base64Encode(string text)
