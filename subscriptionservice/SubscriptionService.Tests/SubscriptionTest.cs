@@ -37,6 +37,22 @@ namespace SubscriptionServiceTests
           Assert.True(paymentwindowurl.GetType() == typeof(string));
         }
 
+        [Fact]
+        public async Task CreateRecurringTest()
+        {
+          //int id = await sut.Create(RandomString(10), "DKK", "Hello Kitty Magazine Subscription");
+          // string state = await sub.CreateRecurring(id, 666, RandomString(10));
+          // Assert.True(state == "pending");
+        }
+
+        [Fact]
+        public async Task CheckStateTest()
+        {
+          int id = await sut.Create(RandomString(10), "DKK", "Hello Kitty Magazine Subscription");
+          string state = await sut.CheckState(id);
+          Assert.True(state == "initial");
+        }
+
         private static string RandomString(int length)
         {
           const string pool = "abcdefghijklmnopqrstuvwxyz0123456789";

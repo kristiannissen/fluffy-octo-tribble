@@ -19,7 +19,6 @@ namespace Subscription.Services
             client.DefaultRequestHeaders.Add("Accept", "application/json");
             string encoded = Base64Encode($":{API_KEY}");
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic", encoded);
-            // Console.WriteLine(client.DefaultRequestHeaders.ToString());
         }
 
         public async Task<int> Create(string orderId, string currency, string description)
@@ -32,23 +31,23 @@ namespace Subscription.Services
             string json = JsonSerializer.Serialize(sub);
             StringContent sC = new StringContent(json, Encoding.UTF8, "application/json");
 
+            HttpResponseMessage response = await client.PostAsync("https://api.quickpay.net/subscriptions", sC);
+
             try
-            {
-                HttpResponseMessage response = await client.PostAsync("https://api.quickpay.net/subscriptions", sC);
-                // Console.WriteLine(response);
-                string responseBody = await response.Content.ReadAsStringAsync();
+            {                                
                 response.EnsureSuccessStatusCode();
 
-                Subscription subscription = JsonSerializer.Deserialize<Subscription>(responseBody);
-
-                return subscription.id;
+                if (response.Content is Object)
+                {
+                  string responseBody = await response.Content.ReadAsStringAsync();
+                  sub = JsonSerializer.Deserialize<Subscription>(responseBody);
+                }
             }
-            catch (HttpRequestException e)
+            finally
             {
-              // FIXME: pass on
-                Console.WriteLine(e.Message);
+              response.Dispose();
             }
-            return 0;
+            return sub.id;
         }
 
         public async Task<string> GetPaymentLinkUrl(string orderId, string currency, string description, int amount)
@@ -78,6 +77,32 @@ namespace Subscription.Services
           }
           return sub.url;
         }
+        /*
+        public async Task<string> CreateRecurring(int subscriptionid, int amount, string orderid)
+        {
+          
+        }*/
+
+        public async Task<string> CheckState(int subscriptionid)
+        {
+          Subscription sub = new Subscription();
+          HttpResponseMessage response = await client.GetAsync($"https://api.quickpay.net/subscriptions/{subscriptionid}");
+
+          try
+          {
+            response.EnsureSuccessStatusCode();
+            if (response.Content is Object)
+            {
+              string responseBody = await response.Content.ReadAsStringAsync();
+              sub = JsonSerializer.Deserialize<Subscription>(responseBody);
+            }
+          }
+          finally
+          {
+            response.Dispose();
+          }
+          return sub.state;
+        }
 
         private static string Base64Encode(string text)
         {
@@ -93,6 +118,7 @@ namespace Subscription.Services
             public string currency { get; set; }
             public string order_id { get; set; }
             public string url { get; set; }
+            public string state { get; set; }
         }
     }
 }
