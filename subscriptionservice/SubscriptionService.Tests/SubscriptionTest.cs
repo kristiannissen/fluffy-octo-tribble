@@ -41,8 +41,9 @@ namespace SubscriptionServiceTests
         public async Task CreateRecurringTest()
         {
             int id = await sut.Create(RandomString(10), "DKK", "Hello Kitty Magazine Subscription");
+            // This will only work if the subscription has been authorized
             string state = await sut.CreateRecurring(id, 666, RandomString(10), true);
-            Assert.True(state == "initial");
+            Assert.True(state == "pending");
         }
 
         [Fact]
@@ -50,7 +51,7 @@ namespace SubscriptionServiceTests
         {
             int id = await sut.Create(RandomString(10), "DKK", "Hello Kitty Magazine Subscription");
             string state = await sut.CheckState(id);
-            Assert.True(state == "initial");
+            Assert.True(state == "pending");
         }
 
         private static string RandomString(int length)
