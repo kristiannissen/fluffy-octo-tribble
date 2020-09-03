@@ -81,7 +81,6 @@ namespace Subscription.Services
         public async Task<string> CreateRecurring(int subscriptionid, int amount, string orderid, bool autoCapture)
         {
             Subscription sub = new Subscription();
-            sub.id = subscriptionid;
             sub.amount = amount;
             sub.order_id = orderid;
             sub.auto_capture = autoCapture;
@@ -89,7 +88,7 @@ namespace Subscription.Services
             string json = JsonSerializer.Serialize(sub);
             StringContent sC = new StringContent(json, Encoding.UTF8, "application/json");
 
-            HttpResponseMessage response = await client.PostAsync("https://api.quickpay.net/subscriptions", sC);
+            HttpResponseMessage response = await client.PostAsync($"https://api.quickpay.net/subscriptions/{subscriptionid}/recurring", sC);
 
             try
             {
