@@ -12,6 +12,10 @@ namespace Subscription.Services
     {
         private static readonly HttpClient client = new HttpClient();
 
+        public string continueUrl { get; set; }
+        public string cancelUrl { get; set; }
+        public string callbackUrl { get; set; }
+
         public SubscriptionService(string API_KEY)
         {
             client.DefaultRequestHeaders.Clear();
@@ -19,6 +23,10 @@ namespace Subscription.Services
             client.DefaultRequestHeaders.Add("Accept", "application/json");
             string encoded = Base64Encode($":{API_KEY}");
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic", encoded);
+            // Set default for URLs
+            continueUrl = "";
+            cancelUrl = "";
+            callbackUrl = "";
         }
 
         public async Task<int> Create(string orderId, string currency, string description)
@@ -56,6 +64,9 @@ namespace Subscription.Services
 
             Subscription sub = new Subscription();
             sub.amount = amount;
+            sub.continue_url = continueUrl;
+            sub.cancel_url = cancelUrl;
+            sub.callback_url = callbackUrl;
 
             string json = JsonSerializer.Serialize(sub);
             StringContent sC = new StringContent(json, Encoding.UTF8, "application/json");
@@ -143,6 +154,9 @@ namespace Subscription.Services
             public string url { get; set; }
             public string state { get; set; }
             public bool auto_capture { get; set; }
+            public string continue_url { get; set; }
+            public string cancel_url { get; set; }
+            public string callback_url { get; set; }
         }
     }
 }

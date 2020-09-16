@@ -33,6 +33,11 @@ namespace SubscriptionServiceTests
         [Fact]
         public async Task CreateSubscriptionURLTest()
         {
+            // Set URLs
+            sut.continueUrl = "http://localhost/continue";
+            sut.cancelUrl = "http://localhost/cancel";
+            sut.callbackUrl = "http://localhost/callback";
+
             string paymentwindowurl = await sut.GetPaymentLinkUrl(RandomString(10), "DKK", "Hello Kitty Magazine Subscription", 666);
             Assert.True(paymentwindowurl.GetType() == typeof(string));
         }
